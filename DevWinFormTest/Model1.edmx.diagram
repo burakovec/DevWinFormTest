@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="afc7bf0ad6684ed7b389d73cf3ec1591" Name="Diagram1">
+        <EntityTypeShape EntityType="northwindModel.authors" Width="1.5" PointX="6" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwindModel.employee" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwindModel.jobs" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwindModel.pub_info" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwindModel.publishers" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwindModel.sales" Width="1.5" PointX="5.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwindModel.stores" Width="1.5" PointX="3" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwindModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwindModel.titleauthor" Width="1.5" PointX="8.25" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwindModel.titles" Width="1.5" PointX="3" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwindModel.discounts" Width="1.5" PointX="5.25" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwindModel.roysched" Width="1.5" PointX="5.25" PointY="19" IsExpanded="true" />
+        <AssociationConnector Association="northwindModel.FK__titleauth__au_id__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="northwindModel.FK__employee__job_id__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="northwindModel.FK__employee__pub_id__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="northwindModel.FK__pub_info__pub_id__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="northwindModel.FK__titles__pub_id__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="northwindModel.FK__sales__stor_id__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="northwindModel.FK__sales__title_id__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="northwindModel.FK__discounts__stor___4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="northwindModel.FK__titleauth__title__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="northwindModel.FK__roysched__title___4D94879B" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
