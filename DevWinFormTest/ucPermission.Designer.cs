@@ -35,20 +35,28 @@
             this.employeeTableAdapter = new DevWinFormTest.northwindDataSetTableAdapters.employeeTableAdapter();
             this.tableAdapterManager = new DevWinFormTest.northwindDataSetTableAdapters.TableAdapterManager();
             this.employeeBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.employeeBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.employeeGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colemp_id = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colfname = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colminit = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.collname = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coljob_id = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coljob_lvl = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colpub_id = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colhire_date = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.northwindDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingNavigator)).BeginInit();
@@ -117,6 +125,31 @@
             this.employeeBindingNavigator.TabIndex = 0;
             this.employeeBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -144,22 +177,16 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 15);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -167,7 +194,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -176,38 +203,20 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // employeeBindingNavigatorSaveItem
             // 
             this.employeeBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.employeeBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("employeeBindingNavigatorSaveItem.Image")));
             this.employeeBindingNavigatorSaveItem.Name = "employeeBindingNavigatorSaveItem";
-            this.employeeBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.employeeBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.employeeBindingNavigatorSaveItem.Text = "Save Data";
             this.employeeBindingNavigatorSaveItem.Click += new System.EventHandler(this.employeeBindingNavigatorSaveItem_Click);
             // 
@@ -225,8 +234,73 @@
             // 
             // gridView1
             // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colemp_id,
+            this.colfname,
+            this.colminit,
+            this.collname,
+            this.coljob_id,
+            this.coljob_lvl,
+            this.colpub_id,
+            this.colhire_date});
             this.gridView1.GridControl = this.employeeGridControl;
             this.gridView1.Name = "gridView1";
+            // 
+            // colemp_id
+            // 
+            this.colemp_id.FieldName = "emp_id";
+            this.colemp_id.Name = "colemp_id";
+            this.colemp_id.Visible = true;
+            this.colemp_id.VisibleIndex = 0;
+            // 
+            // colfname
+            // 
+            this.colfname.FieldName = "fname";
+            this.colfname.Name = "colfname";
+            this.colfname.Visible = true;
+            this.colfname.VisibleIndex = 1;
+            // 
+            // colminit
+            // 
+            this.colminit.FieldName = "minit";
+            this.colminit.Name = "colminit";
+            this.colminit.Visible = true;
+            this.colminit.VisibleIndex = 2;
+            // 
+            // collname
+            // 
+            this.collname.FieldName = "lname";
+            this.collname.Name = "collname";
+            this.collname.Visible = true;
+            this.collname.VisibleIndex = 3;
+            // 
+            // coljob_id
+            // 
+            this.coljob_id.FieldName = "job_id";
+            this.coljob_id.Name = "coljob_id";
+            this.coljob_id.Visible = true;
+            this.coljob_id.VisibleIndex = 4;
+            // 
+            // coljob_lvl
+            // 
+            this.coljob_lvl.FieldName = "job_lvl";
+            this.coljob_lvl.Name = "coljob_lvl";
+            this.coljob_lvl.Visible = true;
+            this.coljob_lvl.VisibleIndex = 5;
+            // 
+            // colpub_id
+            // 
+            this.colpub_id.FieldName = "pub_id";
+            this.colpub_id.Name = "colpub_id";
+            this.colpub_id.Visible = true;
+            this.colpub_id.VisibleIndex = 6;
+            // 
+            // colhire_date
+            // 
+            this.colhire_date.FieldName = "hire_date";
+            this.colhire_date.Name = "colhire_date";
+            this.colhire_date.Visible = true;
+            this.colhire_date.VisibleIndex = 7;
             // 
             // ucPermission
             // 
@@ -269,5 +343,13 @@
         private System.Windows.Forms.ToolStripButton employeeBindingNavigatorSaveItem;
         private DevExpress.XtraGrid.GridControl employeeGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn colemp_id;
+        private DevExpress.XtraGrid.Columns.GridColumn colfname;
+        private DevExpress.XtraGrid.Columns.GridColumn colminit;
+        private DevExpress.XtraGrid.Columns.GridColumn collname;
+        private DevExpress.XtraGrid.Columns.GridColumn coljob_id;
+        private DevExpress.XtraGrid.Columns.GridColumn coljob_lvl;
+        private DevExpress.XtraGrid.Columns.GridColumn colpub_id;
+        private DevExpress.XtraGrid.Columns.GridColumn colhire_date;
     }
 }

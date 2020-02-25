@@ -36,7 +36,26 @@ namespace DevWinFormTest
                 ucPermission.Instance.Dock = DockStyle.Fill;
                 ucPermission.Instance.BringToFront();
             }
-            ucPermission.Instance.BringToFront();
+            else
+            {
+                ucPermission.Instance.BringToFront();
+            }
+
+        }
+
+        private void accordionControlElement4_Click(object sender, EventArgs e)
+        {
+            if (container.Controls.Contains(ucPermission.Instance))
+            {
+                container.Controls.Add(ucPermission.Instance);
+                ucPermission.Instance.Dock = DockStyle.Fill;
+                ucPermission.Instance.BringToFront();
+            }
+            else
+            {
+                ucPermission.Instance.BringToFront();
+            }
+
         }
     }
 }
